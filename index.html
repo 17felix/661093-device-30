@@ -30,7 +30,9 @@
       </form>
       <a class="top-menu__button button-link style link" href="#">
         <span class="button-link__icon icon-user"></span>
+        <span class="enter-name"></span>
         <span class="enter">Войти</span>
+        <span class="escape block-none">Выход</span>
       </a>
       <a class="top-menu__button button-link style link" href="#">
         <span class="button-link__icon icon-chart"></span>
@@ -68,8 +70,19 @@
     <h1 class="visually-hidden">Интернет-магазин "Дивайс"</h1>
     <section class="top-section  container">
       <h2 class="visually-hidden">Top slider</h2>
+      <ol class="pagination-slider list">
+        <li class="pagination-slider__item slider-item">
+          <button class="slider-item__pagination button-active" type="button"><span class="visually-hidden">Слайд 1</span></button>
+        </li>
+        <li class="pagination-slider__item slider-item">
+          <button class="slider-item__pagination" type="button"><span class="visually-hidden">Слайд 2</span></button>
+        </li>
+        <li class="pagination-slider__item slider-item">
+          <button class="slider-item__pagination" type="button"><span class="visually-hidden">Слайд 3</span></button>
+        </li>
+      </ol>
       <ul class="top-section__slider slider-list list">
-        <li class="slider-list__item slider-item show-slider">
+        <li class="slider-list__item slider-item active">
           <div class="slider-item__img block-img">
             <img class="picture" src="img/slider_1.png" width="384" height="486" alt="Самая длинная палка для селфи">
           </div>
@@ -103,7 +116,8 @@
             <span class="block-info__line"></span>
             <p class="block-info__phrase">Худеем <br>правильно!</p>
             <p class="block-info__text">Мотивирующие фитнес-браслеты помогут найти в себе силы
-              <br>не пропускать занятия и соблюдать диету.</p>
+              <br>не пропускать занятия и соблюдать диету.
+            </p>
             <a class="block-info__button style button" href="#">
               <span class="button__text">Подробнее</span>
             </a>
@@ -128,7 +142,8 @@
           <div class="slider-item__info block-info">
             <span class="block-info__line"></span>
             <p class="block-info__phrase">Порхает&nbsp;как&nbsp;бабочка, жалит как пчела!</p>
-            <p class="block-info__text">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>мощным лазером, замаскированным под стандартную камеру.</p>
+            <p class="block-info__text">Этот обычный, на первый взгляд, квадрокоптер оснащен <br>мощным лазером,
+              замаскированным под стандартную камеру.</p>
             <a class="block-info__button style button" href="#">
               <span class="button__text">Подробнее</span>
             </a>
@@ -147,11 +162,6 @@
           </div>
         </li>
       </ul>
-      <ol class="pagination-slider list">
-        <li class="pagination-slider__item"><span></span></li>
-        <li class="pagination-slider__item"><span></span></li>
-        <li class="pagination-slider__item"><span></span></li>
-      </ol>
     </section>
     <section class="popular container">
       <h2 class="visually-hidden">Популярные продукты</h2>
@@ -192,7 +202,7 @@
       <h2 class="visually-hidden">Сервисы</h2>
       <div class="page-services__services services container">
         <ul class="services__buttons services-buttons list">
-          <li class="services-buttons__item services-item service-button-active">
+          <li class="services-buttons__item services-item button-active">
             <button class="services-item__button button">
               <span class="button__text">Доставка</span>
             </button>
@@ -210,24 +220,27 @@
         </ul>
         <span class="services__plank"></span>
         <ul class="services__slider services-slider list">
-          <li class="services-slider__item service active-service">
+          <li class="services-slider__item service active">
             <div class="service__info">
               <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему <br>подъезду совершенно бесплатно! Ведь мы неплохо <br>заработаем, поднимая его на ваш этаж.</p>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему <br>подъезду совершенно бесплатно! Ведь мы неплохо
+                <br>заработаем, поднимая его на ваш этаж.</p>
             </div>
             <span class="service__img-delivery"></span>
           </li>
           <li class="services-slider__item service">
             <div class="service__info">
               <h3>Гарантия</h3>
-              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. <br>Товар, не дом, конечно же.</p>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                <br>Товар, не дом, конечно же.</p>
             </div>
             <span class="service__img-warranty"></span>
           </li>
           <li class="services-slider__item service">
             <div class="service__info">
               <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные <br>условия кредита. Выгодные для нашего банка, разумеется.</p>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+                <br>условия кредита. Выгодные для нашего банка, разумеется.</p>
             </div>
             <span class="service__img-credit"></span>
           </li>
@@ -291,7 +304,8 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
           Всякое бывает.</p>
         <a class="contacts__map style" href="#">
-          <img class="picture" src="img/map.png" width="560" height="222" alt="Карта офиса по адресу улица Строителей, 15">
+          <img class="picture" src="img/map.png" width="560" height="222"
+            alt="Карта офиса по адресу улица Строителей, 15">
         </a>
         <button class="contacts__button button">
           <span class="button__text">Напишите нам</span>
@@ -311,6 +325,7 @@
           <a class="footer-rigth__button button-link style link" href="#">
             <span class="button-link__icon-footer icon-user-footer"></span>
             <span class="enter">Войти</span>
+            <span class="escape block-none">Выход</span>
           </a>
           <a class="footer-rigth__button button-link style link" href="#">
             <span class="button-link__icon-footer icon-chart-footer"></span>
@@ -358,30 +373,27 @@
       </div>
     </div>
   </footer>
-  <div class="modal-map" hidden>
+  <div class="modal-map">
     <button class="modal-map__close close" type="button">
       <span class="visually-hidden">Закрыть</span>
-      <span class="close__icon"></span>
     </button>
     <iframe
       src="https://yandex.ru/map-widget/v1/?um=constructor%3A642ef8d19241a22f313b8511cc9b561c3dece2db63066985b97fe6817e204fe1&amp;source=constructor"
       width="994" height="593" frameborder="0"></iframe>
   </div>
-  <section class="modal-feedback" id="modal-feedback" hidden>
+  <section class="modal-feedback" id="modal-feedback">
     <div class="modal-feedback__name">
       <h2 class="visually-hidden">Напишите нам</h2>
     </div>
     <form class="modal-feedback__form feedback-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="feedback-form__item form-item">
-        <p class="form-item__feedback feedback-item">
-          <label for="fullname">Ваше имя:</label>
-          <input class="feedback-item__field" type="text" name="fullname" id="fullname" placeholder="Имя Фамилия">
-        </p>
-        <p class="form-item__feedback feedback-item">
-          <label for="email">Ваш e-mail:</label>
-          <input class="feedback-item__field" type="text" name="email" id="email" placeholder="email@example.com">
-        </p>
-      </div>
+      <p class="feedback-form__name feedback-item">
+        <label for="fullname">Ваше имя:</label>
+        <input class="feedback-item__field" type="text" name="fullname" id="fullname" placeholder="Имя Фамилия">
+      </p>
+      <p class="feedback-form__email feedback-item">
+        <label for="email">Ваш e-mail:</label>
+        <input class="feedback-item__field" type="text" name="email" id="email" placeholder="email@example.com">
+      </p>
       <p class="feedback-form__message feedback-message feedback-item">
         <label for="message">Текст письма:</label>
         <textarea name="message" id="message" rows="5" placeholder="В свободной форме"></textarea>
@@ -391,10 +403,10 @@
       </button>
       <button class="modal-feedback__close close" type="button">
         <span class="visually-hidden">Закрыть</span>
-        <span class="close__icon"></span>
       </button>
     </form>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
