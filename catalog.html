@@ -17,7 +17,7 @@
   <header class="page-header  container">
     <a class="page-header__logo link" href="index.html">
       <svg role="img" aria-label="Логотип магазина Device">
-        <use xlink:href="img/sprite.svg#logo"></use>
+        <use xlink:href="img/logo.svg#logo"></use>
       </svg>
     </a>
     <div class="page-header__top top-menu">
@@ -26,7 +26,7 @@
           <span class="visually-hidden">Поиск по сайту</span>
           <span class="search__icon-lens"></span>
         </label>
-        <input class="search__text" type="text" placeholder="Поиск по сайту" id="search">
+        <input class="search__text" type="text" placeholder="Поиск по сайту" id="search" required >
         <button class="search__button" type="submit">Найти</button>
       </form>
       <a class="top-menu__button button-link style link" href="#">
@@ -92,10 +92,10 @@
             <div class="range__filter range-filter">
               <div class="range-filter__control range-control">
                 <div class="range-control scale">
-                  <div class="scale__bar"></div>
+                  <div class="scale__bar" style="width: 94px; margin-left: 20px;"></div>
                 </div>
-                <div class="range-control__toggle toggle toggle-min"></div>
-                <div class="range-control__toggle toggle toggle-max"></div>
+                <div class="range-control__toggle toggle toggle-min" style="left: 0;"></div>
+                <div class="range-control__toggle toggle toggle-max" style="left: 115px;"></div>
               </div>
               <div class="range__price range-price">
                 <label for="min-price">
@@ -254,7 +254,7 @@
       <div class="footer__top footer-top">
         <a class="footer-top__logo link" href="index.html">
           <svg role="img" aria-label="Логотип магазина Device">
-            <use xlink:href="img/sprite.svg#logo"></use>
+            <use xlink:href="img/logo.svg#logo"></use>
           </svg>
         </a>
         <div class="footer-top__rigth footer-rigth">
@@ -288,18 +288,24 @@
         <span class="footer-line"></span>
         <ul class="footer-bottom__list social list">
           <li class="social__item social-item">
-            <a class="social-item__button link" href="https://www.facebook.com">
-              <span class="visually-hidden">Фейсбук</span>
+            <a class="social-item__button style" href="https://www.facebook.com">
+              <svg role="img" aria-label="Фейсбук">
+                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item social-item">
-            <a class="social-item__button link" href="https://www.instagram.com">
-              <span class="visually-hidden">Инстаграм</span>
+            <a class="social-item__button style" href="https://www.instagram.com">
+              <svg role="img" aria-label="Инстаграм">
+                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="social__item social-item">
-            <a class="social-item__button link" href="https://twitter.com/">
-              <span class="visually-hidden">Твиттер</span>
+            <a class="social-item__button style" href="https://twitter.com/">
+              <svg role="img" aria-label="Твиттер">
+                 <use xlink:href="img/sprite.svg#icon_witter"></use>
+              </svg>
             </a>
           </li>
         </ul>
