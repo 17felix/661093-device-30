@@ -29,18 +29,17 @@
         <input class="search__text" type="text" placeholder="Поиск по сайту" id="search" required >
         <button class="search__button" type="submit">Найти</button>
       </form>
-      <a class="top-menu__button button-link style link" href="#">
-        <span class="button-link__icon icon-user"></span>
-        <span class="enter-name"></span>
-        <span class="enter">Войти</span>
-        <span class="escape block-none">Выход</span>
-      </a>
-      <a class="top-menu__button button-link style link" href="#">
-        <span class="button-link__icon icon-chart"></span>
+      <div class="top-menu__button top-menu__button--icon_user top-enter-link">
+        <a class="top-enter-link__name enter-name style link" href="#">Валентин Петухов</a>
+        <a class="top-enter-link__enter button-link style link" href="#">
+          <span class="enter block-none">Войти</span>
+          <span class="escape">Выход</span>
+        </a>
+      </div>
+      <a class="top-menu__button top-menu__button--icon_chart button-link style link" href="#">
         <span>Сравнить</span>
       </a>
-      <a class="top-menu__button button-link style link" href="#">
-        <span class="button-link__icon icon-basket"></span>
+      <a class="top-menu__button top-menu__button--icon_basket button-link style link" href="#">
         <span>Корзина</span>
       </a>
     </div>
@@ -49,8 +48,8 @@
         <a class="nav-item__button-catalog style link" href="#">Каталог товаров</a>
         <ul class="nav-item__catalog-nav list">
           <li><a class="style link" href="#">Виртуальная реальность</a></li>
-          <li><a class="style link" href="#">Моноподы для селфи</a></li>
-          <li><a class="style link">Экшн-камеры</a></li>
+          <li><a class="style link">Моноподы для селфи</a></li>
+          <li><a class="style link" href="#">Экшн-камеры</a></li>
           <li><a class="style link" href="#">Фитнес-браслеты</a></li>
           <li><a class="style link" href="#">Умные часы</a></li>
           <li><a class="style link" href="#">Квадрокоптеры</a></li>
@@ -84,7 +83,7 @@
       </ul>
       <div class="page-catalog__product catalog-product">
         <h2 class="catalog-product__title-filter title-filter">фильтр:</h2>
-        <form class="catalog-product__filter-form filters-form" method="get" id="filter-form" action="https://echo.htmlacademy.ru/">
+        <form class="catalog-product__filter-form filters-form" method="get" id="filter-form" action="https://echo.htmlacademy.ru/" target="_blank">
           <fieldset class="filters-form__range range common-styles">
             <legend class="range__title">Стоимость</legend>
             <div class="range__filter range-filter">
@@ -92,8 +91,8 @@
                 <div class="range-control scale">
                   <div class="scale__bar" style="width: 94px; margin-left: 20px;"></div>
                 </div>
-                <div class="range-control__toggle toggle toggle-min" style="left: 0;"></div>
-                <div class="range-control__toggle toggle toggle-max" style="left: 115px;"></div>
+                <div class="range-control__toggle toggle toggle-min" style="left: 0;" tabindex="0"><span class="visually-hidden">установка диапозана стоимости от</span></div>
+                <div class="range-control__toggle toggle toggle-max" style="left: 115px;" tabindex="0"><span class="visually-hidden">установка диапозана стоимости до</span></div>
               </div>
               <div class="range__price range-price">
                 <label for="min-price">
@@ -182,55 +181,55 @@
           <h2 class="visually-hidden">Каталог</h2>
           <ul class="catalog-items__list catalog list">
             <li class="catalog__item catalog-item">
-              <img class="picture" width="360" height="380" src="img/product_1.png" alt="Любительская селфи-палка">
+              <img class="picture" width="360" height="380" src="img/product_1.png" alt="Тонкая ручка с держателем телефона">
               <div class="catalog-item__order order">
-                <button class="order__button button" type="button">
+                <button class="order__button button" type="button" aria-label="добавить в корзину любительскую селфи-палку">
                   <span class="button__text">В корзину</span>
                 </button>
-                <button class="order__compare" type="button">Добавить к сравнению</button>
+                <button class="order__compare" type="button" aria-label="добавить к сравнению любительскую селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
                 <span class="item-info__title">Любительская селфи-палка</span>
-                <div class="item-info__price"><span>500</span> руб</div>
+                <div class="item-info__price"><span>1 100</span> руб.</div>
               </div>
             </li>
             <li class="catalog__item catalog-item">
-              <img class="picture" width="360" height="380" src="img/product_2.png" alt="Профессиональня селфи-палка">
+              <img class="picture" width="360" height="380" src="img/product_2.png" alt="Толстая ручка с держателем телефона">
               <div class="catalog-item__order order">
-                <button class="order__button button" type="button">
+                <button class="order__button button" type="button" aria-label="добавить в корзину профессиональную селфи-палку">
                   <span class="button__text">В корзину</span>
                 </button>
-                <button class="order__compare" type="button">Добавить к сравнению</button>
+                <button class="order__compare" type="button" aria-label="добавить к сравнению профессиональную селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Профессиональня <br>селфи-палка</span>
-                <div class="item-info__price"><span>1500</span> руб</div>
+                <span class="item-info__title">Профессиональная <br>селфи-палка</span>
+                <div class="item-info__price"><span>1 500</span> руб.</div>
               </div>
             </li>
             <li class="catalog__item catalog-item">
-              <img class="picture" width="360" height="380" src="img/product_3.png" alt="Непотопляемая селфи-палка">
+              <img class="picture" width="360" height="380" src="img/product_3.png" alt="Толстая ручка, в виде поплавка, с держателем телефона">
               <div class="catalog-item__order order">
-                <button class="order__button button" type="button">
+                <button class="order__button button" type="button" aria-label="добавить в корзину непотопляемую селфи-палку">
                   <span class="button__text">В корзину</span>
                 </button>
-                <button class="order__compare" type="button">Добавить к сравнению</button>
+                <button class="order__compare" type="button" aria-label="добавить к сравнению непотопляемую селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
                 <span class="item-info__title">Непотопляемая <br>селфи-палка</span>
-                <div class="item-info__price"><span>2500</span> руб</div>
+                <div class="item-info__price"><span>1 500</span> руб.</div>
               </div>
             </li>
-            <li class="catalog__item catalog-item">
-              <img class="picture" width="360" height="380" src="img/product_4.png" alt="Селфи-палка «Следуй за мной»">
+            <li class="catalog__item catalog-item new">
+              <img class="picture" width="360" height="380" src="img/product_4.png" alt="Рукоятка держателя телефона выполненная в виде руки">
               <div class="catalog-item__order order">
-                <button class="order__button button" type="button">
+                <button class="order__button button" type="button" aria-label="добавить в корзину селфи-палку «Следуй за мной»">
                   <span class="button__text">В корзину</span>
                 </button>
-                <button class="order__compare" type="button">Добавить к сравнению</button>
+                <button class="order__compare" type="button" aria-label="добавить к сравнению селфи-палку «Следуй за мной»">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Селфи-палка <q>Следуй <br>за мной</q></span>
-                <div class="item-info__price"><span>4900</span> руб</div>
+                <span class="item-info__title">Селфи-палка <q>Следуй за <br>мной</q></span>
+                <div class="item-info__price"><span>1 900</span> руб.</div>
               </div>
             </li>
           </ul>
@@ -256,17 +255,17 @@
           </svg>
         </a>
         <div class="footer-top__rigth footer-rigth">
-          <a class="footer-rigth__button button-link style link" href="#">
-            <span class="button-link__icon-footer icon-user-footer"></span>
-            <span class="enter">Войти</span>
-            <span class="escape block-none">Выход</span>
-          </a>
-          <a class="footer-rigth__button button-link style link" href="#">
-            <span class="button-link__icon-footer icon-chart-footer"></span>
+          <div class="footer-rigth__button footer-rigth__button--icon_user footer-rigth-button button-link">
+            <a class="footer-rigth-button__enter-name enter-name style footer-link" href="#">Валентин Петухов</a>
+            <a class="footer-rigth-button__enter button-link style" href="#">
+              <span class="enter footer-link block-none">Войти</span>
+              <span class="escape footer-link">Выход</span>
+            </a>
+          </div>
+          <a class="footer-rigth__button footer-rigth__button--icon_chart button-link style footer-link" href="#">
             <span>Сравнить</span>
           </a>
-          <a class="footer-rigth__button button-link style link" href="#">
-            <span class="button-link__icon-footer icon-basket-footer"></span>
+          <a class="footer-rigth__button footer-rigth__button--icon_basket button-link style footer-link" href="#">
             <span>Корзина</span>
           </a>
         </div>
@@ -286,22 +285,22 @@
         <span class="footer-line"></span>
         <ul class="footer-bottom__list social list">
           <li class="social__item social-item">
-            <a class="social-item__button style" href="https://www.facebook.com">
-              <svg role="img" aria-label="Фейсбук">
+            <a class="social-item__button style" href="#" aria-label="Мы в Фейсбуке">
+              <svg role="img">
                  <use xlink:href="img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social-item">
-            <a class="social-item__button style" href="https://www.instagram.com">
-              <svg role="img" aria-label="Инстаграм">
+            <a class="social-item__button style" href="#" aria-label="Мы в Инстаграме">
+              <svg role="img">
                  <use xlink:href="img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social-item">
-            <a class="social-item__button style" href="https://twitter.com/">
-              <svg role="img" aria-label="Твиттер">
+            <a class="social-item__button style" href="#" aria-label="Мы в Твиттере">
+              <svg role="img">
                  <use xlink:href="img/sprite.svg#icon_witter"></use>
               </svg>
             </a>
