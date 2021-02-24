@@ -14,7 +14,7 @@
 </head>
 
 <body class="page-body inner-page">
-  <header class="page-header  container">
+  <header class="page-header container">
     <a class="page-header__logo link" href="index.html">
       <svg role="img" aria-label="Логотип магазина Device">
         <use xlink:href="img/logo.svg#logo"></use>
@@ -29,19 +29,17 @@
         <input class="search__text" type="text" placeholder="Поиск по сайту" id="search" required >
         <button class="search__button" type="submit">Найти</button>
       </form>
-      <div class="top-menu__button top-menu__button--icon_user top-enter-link">
-        <a class="top-enter-link__name enter-name style link" href="#">Валентин Петухов</a>
-        <a class="top-enter-link__enter button-link style link" href="#">
-          <span class="enter block-none">Войти</span>
-          <span class="escape">Выход</span>
-        </a>
+      <div class="top-menu__button top-menu__button--icon_user top-enter-link link">
+        <a class="top-enter-link__name enter-name button-link style link" href="#">Валентин Петухов</a>
+        <a class="top-enter-link__name style link block-none" href="#">Войти</a>
+        <a class="top-enter-link__escape escape style link" href="#">Выход</a>
       </div>
-      <a class="top-menu__button top-menu__button--icon_chart button-link style link" href="#">
-        <span>Сравнить</span>
-      </a>
-      <a class="top-menu__button top-menu__button--icon_basket button-link style link" href="#">
-        <span>Корзина</span>
-      </a>
+      <div class="top-menu__button top-menu__button--icon_chart button-link link">
+        <a class="style" href="#">Сравнить</a>
+      </div>
+      <div class="top-menu__button top-menu__button--icon_basket button-link link">
+        <a class="style" href="#">Корзина</a>
+      </div>
     </div>
     <ul class="page-header__nav-site nav-site list">
       <li class="nav-site__item nav-item">
@@ -189,7 +187,10 @@
                 <button class="order__compare" type="button" aria-label="добавить к сравнению любительскую селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Любительская селфи-палка</span>
+                <p class="item-info__new">
+                  <span class="visually-hidden">новинка</span>
+                </p>
+                <a class="item-info__title style link" href="#">Любительская селфи-палка</a>
                 <div class="item-info__price"><span>1 100</span> руб.</div>
               </div>
             </li>
@@ -202,7 +203,10 @@
                 <button class="order__compare" type="button" aria-label="добавить к сравнению профессиональную селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Профессиональная <br>селфи-палка</span>
+                <p class="item-info__new">
+                  <span class="visually-hidden">новинка</span>
+                </p>
+                <a class="item-info__title style link" href="#">Профессиональная <br>селфи-палка</a>
                 <div class="item-info__price"><span>1 500</span> руб.</div>
               </div>
             </li>
@@ -215,11 +219,14 @@
                 <button class="order__compare" type="button" aria-label="добавить к сравнению непотопляемую селфи-палку">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Непотопляемая <br>селфи-палка</span>
+                <p class="item-info__new">
+                  <span class="visually-hidden">новинка</span>
+                </p>
+                <a class="item-info__title style link" href="#">Непотопляемая <br>селфи-палка</a>
                 <div class="item-info__price"><span>1 500</span> руб.</div>
               </div>
             </li>
-            <li class="catalog__item catalog-item new">
+            <li class="catalog__item catalog-item">
               <img class="picture" width="360" height="380" src="img/product_4.png" alt="Рукоятка держателя телефона выполненная в виде руки">
               <div class="catalog-item__order order">
                 <button class="order__button button" type="button" aria-label="добавить в корзину селфи-палку «Следуй за мной»">
@@ -228,15 +235,18 @@
                 <button class="order__compare" type="button" aria-label="добавить к сравнению селфи-палку «Следуй за мной»">Добавить к сравнению</button>
               </div>
               <div class="catalog__item-info item-info">
-                <span class="item-info__title">Селфи-палка <q>Следуй за <br>мной</q></span>
+                <p class="item-info__new item-info__new--active">
+                  <span class="visually-hidden">новинка</span>
+                </p>
+                <a class="item-info__title style link" href="#">Селфи-палка <q>Следуй за <br>мной</q></a>
                 <div class="item-info__price"><span>1 900</span> руб.</div>
               </div>
             </li>
           </ul>
           <div class="catalog-items__select pagination-select">
-            <a class="pagination-select__list  pagination-down style" href="#">Назад</a>
+            <a class="pagination-select__list pagination-down style" href="#">Назад</a>
             <ul class="pagination-select__list pagination-list list">
-              <li class="pagination-list__item  active"><a class="style" href="#">1</a></li>
+              <li class="pagination-list__item active"><a class="style" href="#">1</a></li>
               <li class="pagination-list__item"><a class="style" href="#">2</a></li>
               <li class="pagination-list__item"><a class="style" href="#">3</a></li>
             </ul>
@@ -257,28 +267,26 @@
         <div class="footer-top__rigth footer-rigth">
           <div class="footer-rigth__button footer-rigth__button--icon_user footer-rigth-button button-link">
             <a class="footer-rigth-button__enter-name enter-name style footer-link" href="#">Валентин Петухов</a>
-            <a class="footer-rigth-button__enter button-link style" href="#">
-              <span class="enter footer-link block-none">Войти</span>
-              <span class="escape footer-link">Выход</span>
-            </a>
+            <a class="footer-rigth-button__enter style footer-focus footer-link block-none" href="#">Войти</a>
+            <a class="footer-rigth-button__escape style footer-focus footer-link" href="#">Выход</a>
           </div>
-          <a class="footer-rigth__button footer-rigth__button--icon_chart button-link style footer-link" href="#">
-            <span>Сравнить</span>
-          </a>
-          <a class="footer-rigth__button footer-rigth__button--icon_basket button-link style footer-link" href="#">
-            <span>Корзина</span>
-          </a>
+          <div class="footer-rigth__button footer-rigth__button--icon_chart button-link">
+            <a class="style footer-link" href="#">Сравнить</a>
+          </div>
+          <div class="footer-rigth__button footer-rigth__button--icon_basket button-link">
+            <a class="style footer-link" href="#">Корзина</a>
+          </div>
         </div>
       </div>
       <div class="footer__middle footer-middle">
         <p class="footer-middle__adress">г. Москва, ул. Строителей, 15</p>
         <ul class="footer-middle__nav list">
-          <li><a class="style link" href="index.html#3">Доставка</a></li>
-          <li><a class="style link" href="index.html#3">Гарантия</a></li>
-          <li><a class="style link" href="index.html#5">Контакты</a></li>
+          <li><a class="footer-focus style link" href="index.html#3">Доставка</a></li>
+          <li><a class="footer-focus style link" href="index.html#3">Гарантия</a></li>
+          <li><a class="footer-focus style link" href="index.html#5">Контакты</a></li>
         </ul>
         <div class="footer-middle__phone">
-          <a class="style link" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+          <a class="footer-focus style link" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
         </div>
       </div>
       <div class="footer__bottom footer-bottom">
@@ -286,27 +294,27 @@
         <ul class="footer-bottom__list social list">
           <li class="social__item social-item">
             <a class="social-item__button style" href="#" aria-label="Мы в Фейсбуке">
-              <svg role="img">
-                 <use xlink:href="img/sprite.svg#icon_facebook"></use>
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon_facebook"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social-item">
             <a class="social-item__button style" href="#" aria-label="Мы в Инстаграме">
-              <svg role="img">
-                 <use xlink:href="img/sprite.svg#icon_instagram"></use>
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon_instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item social-item">
             <a class="social-item__button style" href="#" aria-label="Мы в Твиттере">
-              <svg role="img">
-                 <use xlink:href="img/sprite.svg#icon_witter"></use>
+              <svg aria-hidden="true">
+                <use xlink:href="img/sprite.svg#icon_witter"></use>
               </svg>
             </a>
           </li>
         </ul>
-        <a class="footer-bottom__logo-html style link" href="https://htmlacademy.ru/intensive/htmlcss">
+        <a class="footer-bottom__logo-html footer-focus style link" href="https://htmlacademy.ru/intensive/htmlcss">
           <img class="picture" src="img/logo-html.svg" width="27" height="35" alt="Логотип html Академии">
         </a>
       </div>

@@ -35,10 +35,21 @@ const buttonMap = document.querySelector('.contacts__map');
 const modalMap = document.querySelector('.modal-map');
 const mapClose = modalMap.querySelector('.modal-map__close');
 
+let lastFocus;
+const rememberFocus = function (evt) {
+  if (evt.keyCode === 13 || evt.keyCode === 32) {
+    lastFocus = evt.target;
+  }
+}
+
 const modalClose = function (evt) {
   evt.preventDefault();
   document.querySelector('.show-block').classList.remove('show-block');
   window.removeEventListener('keypress', onEscapePress);
+  if (lastFocus) {
+    lastFocus.focus();
+    lastFocus = null;
+  }
 }
 
 const onEscapePress = function (evt) {
@@ -47,9 +58,13 @@ const onEscapePress = function (evt) {
   }
 };
 
+buttonMap.addEventListener('keydown', rememberFocus);
 buttonMap.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalMap.classList.add('show-block');
+  if (lastFocus) {
+    mapClose.focus();
+  }
   window.addEventListener('keydown', onEscapePress);
 });
 
@@ -73,6 +88,7 @@ try {
   isStorageSupport = false;
 }
 
+contactsButton.addEventListener('keydown', rememberFocus);
 contactsButton.addEventListener('click', function (evt) {
   evt.preventDefault();
   modalFeedback.classList.add('show-block');
